@@ -1,0 +1,33 @@
+[user]
+	name = Verique
+	email = suolucitem@gmail.com
+[core]
+	longpaths = true
+	editor = nvim
+	autocrlf = false
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[rebase]
+	autoStash = false
+[diff]
+	tool = vimdiff
+	guitool = vimdiff
+[merge]
+	tool = nvimdiff
+	guitool = nvimdiff
+[difftool "vimdiff"]
+	path = nvim
+[mergetool "nvimdiff"]
+    path = nvim
+[credential]
+    helper = /usr/local/bin/git-credential-manager
+    credentialStore = cache
+[credential "https://git.pik.ru"]
+	provider = generic
+[push]
+	autoSetupRemote = true
+	default = current
+[credential "https://dev.azure.com"]
+	useHttpPath = true

@@ -1,8 +1,6 @@
 /*
 
-!.bash*
-.bash_history
-!.inputrc
-!.profile
 !.gitignore
+!.gitconfig
 !.config
+!.zshrc
