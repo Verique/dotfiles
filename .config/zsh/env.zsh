@@ -7,6 +7,7 @@ export PATH
 export ZSH="$HOME/.oh-my-zsh"
 export BROWSER=firefox.exe
 export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
 
 HISTSIZE=1000
 SAVEHIST=1000
