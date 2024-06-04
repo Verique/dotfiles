@@ -3,3 +3,4 @@
 -[ ] inlay hints 
 -[ ] refactoring
 -[ ] https://github.com/pmizio/typescript-tools.nvim
+-[ ] git cred

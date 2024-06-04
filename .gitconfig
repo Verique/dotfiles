@@ -23,7 +23,7 @@
     path = nvim
 [credential]
     helper = /usr/local/bin/git-credential-manager
-    credentialStore = cache
+    credentialStore = gpg
 [credential "https://git.pik.ru"]
 	provider = generic
 [push]
