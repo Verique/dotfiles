@@ -1,0 +1,5 @@
+-[x] better LSP
+-[x] onAttach autocmd
+-[ ] inlay hints 
+-[ ] refactoring
+-[ ] https://github.com/pmizio/typescript-tools.nvim

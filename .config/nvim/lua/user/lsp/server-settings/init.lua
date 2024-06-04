@@ -18,7 +18,6 @@ return function(server_name)
 	local require_ok, conf_opts = pcall(require, "user.lsp.server-settings." .. server_name)
 
 	local opts = {
-		on_attach = require("user.lsp.on-attach"),
 		capabilities = overriddenCapabilities[server_name] or basicCapabilities
 	}
 

@@ -1,11 +1,4 @@
---[[ local status_ok, wk = pcall(require, "nvim-autopairs") ]]
---[[ if not status_ok then ]]
---[[   vim.notify("[CONFIG] no autopairs found"); ]]
---[[   return ]]
---[[ end ]]
-
-local M = {}
-M.setup = function()
+local setup = function()
 	require("nvim-autopairs").setup({
 		check_ts = true,
 		ts_config = {
@@ -22,4 +15,4 @@ M.setup = function()
 		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 	end
 end
-return M
+return { setup = setup }

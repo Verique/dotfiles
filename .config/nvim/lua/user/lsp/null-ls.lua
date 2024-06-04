@@ -1,5 +1,4 @@
 local null_ls = require("null-ls")
-
 local setup = function()
 	null_ls.setup({
 		sources = {

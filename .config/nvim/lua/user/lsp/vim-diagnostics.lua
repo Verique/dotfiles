@@ -6,11 +6,13 @@ local setup = function()
 	end
 
 	local config = {
-		virtual_text = true, -- disable virtual text
+		virtual_text = { severity = { min = vim.diagnostic.severity.ERROR } },
 
-		--[[ signs = { ]]
-		--[[ 	active = signs, -- show signs ]]
-		--[[ }, ]]
+		signs = {
+			active = signs,
+			severity = { min = vim.diagnostic.severity.WARN },
+		},
+
 		update_in_insert = true,
 		underline = true,
 		severity_sort = true,
