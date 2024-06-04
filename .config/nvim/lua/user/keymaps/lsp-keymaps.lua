@@ -20,11 +20,10 @@ M.on_attach_keymaps = function(client, bufnr)
 	wk.addWkKey("n", "gr", "Go to References", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 	if client.name == "vtsls" then
-		wk.addWkKey("n", "<Leader>lo", "Organize Imports", "<cmd>TSToolsOrganizeImports<cr>", opts)
-		wk.addWkKey("n", "<Leader>lI", "Import All", "<cmd>TSToolsAddMissingImports<cr>", opts)
-		wk.addWkKey("n", "<Leader>lR", "Rename File", "<cmd>TSToolsRenameFile<cr>", opts)
-        wk.addWkKey("n", "gd", "Go to Definition", "<cmd>TSToolsGoToSourceDefinition<cr>", opts)
-        wk.addWkKey("n", "gR", "Go to File References", "<cmd>TSToolsFileReferences<cr>", opts)
+		wk.addWkKey("n", "<Leader>lo", "Organize Imports", "<cmd>VtsExec organize_imports<cr>", opts)
+		wk.addWkKey("n", "<Leader>lI", "Import All", "<cmd>VtsExec add_missing_imports<cr>", opts)
+        wk.addWkKey("n", "gd", "Go to Definition", "<cmd>VtsExec goto_source_definition<cr>", opts)
+        wk.addWkKey("n", "gR", "Go to File References", "<cmd>VtsExec file_references<cr>", opts)
 	end
 end
 

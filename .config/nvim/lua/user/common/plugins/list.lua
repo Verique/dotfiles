@@ -34,8 +34,18 @@ return {
 			"nvimtools/none-ls.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 			"RRethy/vim-illuminate",
-            "yioneko/nvim-vtsls"
+			"yioneko/nvim-vtsls",
 		},
+	},
+	{
+		"antosha417/nvim-lsp-file-operations",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-tree.lua",
+		},
+		config = function()
+			require("lsp-file-operations").setup()
+		end,
 	},
 	-- Surround
 	{
