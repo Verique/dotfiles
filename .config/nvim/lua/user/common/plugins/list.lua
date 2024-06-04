@@ -32,17 +32,25 @@ return {
 			"williamboman/mason-lspconfig.nvim", -- simple to use language server installer
 			"Hoffs/omnisharp-extended-lsp.nvim",
 			"nvimtools/none-ls.nvim",
-			"jose-elias-alvarez/nvim-lsp-ts-utils",
 			"hrsh7th/cmp-nvim-lsp",
 			"RRethy/vim-illuminate",
+            "yioneko/nvim-vtsls"
 		},
 	},
-
 	-- Surround
-	{ "kylechui/nvim-surround", config = require("user.surround").setup, version = "*", event = "VeryLazy" },
+	{
+		"kylechui/nvim-surround",
+		config = require("user.surround").setup,
+		version = "*",
+		event = "VeryLazy",
+	},
 
 	-- Git
-	{ "lewis6991/gitsigns.nvim", config = require("user.gitsigns").setup, dependencies = { "sindrets/diffview.nvim" } },
+	{
+		"lewis6991/gitsigns.nvim",
+		config = require("user.gitsigns").setup,
+		dependencies = { "sindrets/diffview.nvim" },
+	},
 
 	-- Tree
 	{ "kyazdani42/nvim-tree.lua", config = require("user.nvimtree").setup },
@@ -68,12 +76,16 @@ return {
 	},
 
 	-- Treesitter (highlightning)
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = require("user.treesitter").setup },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = require("user.treesitter").setup,
+	},
 	"hiphish/rainbow-delimiters.nvim",
 
 	-- Autopairs
 	{ "windwp/nvim-autopairs", config = require("user.autopairs").setup },
 	"windwp/nvim-ts-autotag",
 	{ "folke/which-key.nvim", init = require("user.keymaps").init, config = require("user.keymaps").setup },
-    "knubie/vim-kitty-navigator"
+	"knubie/vim-kitty-navigator",
 }

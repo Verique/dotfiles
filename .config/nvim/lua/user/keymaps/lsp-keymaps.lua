@@ -1,7 +1,6 @@
 local M = {}
 
 M.on_attach_keymaps = function(client, bufnr)
-	local utils_ok, _ = pcall(require, "nvim-lsp-ts-utils")
 	local wk = require("user.keymaps.helpers")
 	local opts = { buffer = bufnr }
 
@@ -20,11 +19,12 @@ M.on_attach_keymaps = function(client, bufnr)
 	wk.addWkKey("n", "gi", "Go to Implementation", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	wk.addWkKey("n", "gr", "Go to References", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
-	if utils_ok and client.name == "tsserver" then
-		wk.addWkKey("n", "<Leader>lo", "Organize Imports", "<cmd>TSLspOrganize<cr>", { buffer = bufnr })
-		wk.addWkKey("n", "<Leader>lI", "Import All", ":TSLspImportAll<CR>", { buffer = bufnr })
-		wk.addWkKey("n", "<Leader>li", "Import Current", ":TSLspImportCurrent<CR>", { buffer = bufnr })
-		wk.addWkKey("n", "<Leader>lR", "Rename File", ":TSLspRenameFile<CR>", { buffer = bufnr })
+	if client.name == "vtsls" then
+		wk.addWkKey("n", "<Leader>lo", "Organize Imports", "<cmd>TSToolsOrganizeImports<cr>", opts)
+		wk.addWkKey("n", "<Leader>lI", "Import All", "<cmd>TSToolsAddMissingImports<cr>", opts)
+		wk.addWkKey("n", "<Leader>lR", "Rename File", "<cmd>TSToolsRenameFile<cr>", opts)
+        wk.addWkKey("n", "gd", "Go to Definition", "<cmd>TSToolsGoToSourceDefinition<cr>", opts)
+        wk.addWkKey("n", "gR", "Go to File References", "<cmd>TSToolsFileReferences<cr>", opts)
 	end
 end
 
