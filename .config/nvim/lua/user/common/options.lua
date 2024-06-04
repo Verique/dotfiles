@@ -12,7 +12,7 @@ local options = {
 	hlsearch = true, -- highlight all matches on previous search pattern
 	ignorecase = true, -- ignore case in search patterns
 	bufhidden = "wipe",
-	mouse = "a", -- allow the mouse to be used in neovim
+	mouse = "", -- allow the mouse to be used in neovim
 	pumheight = 10, -- pop up menu height
 	showmode = false, -- we don't need to see things like -- INSERT -- anymore
 	showtabline = 2, -- always show tabs
@@ -39,9 +39,9 @@ local options = {
 	scrolloff = 8, -- minimum space offset when scrolling
 	sidescrolloff = 8,
 	confirm = true, -- confirmation for closing buffers
-	keymap = "russian-jcukenwin", -- russian input
+--	keymap = "russian-jcukenwin", -- russian input
 	fixendofline = true,
-    fixeol = true
+	fixeol = true,
 }
 
 vim.opt.shortmess:append("c")
@@ -58,3 +58,16 @@ vim.cmd("language en_US.UTF-8")
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+
+vim.g.clipboard = {
+	name = "WslClipboard",
+	copy = {
+		["+"] = "clip.exe",
+		["*"] = "clip.exe",
+	},
+	paste = {
+		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+	},
+	cache_enabled = 0,
+}

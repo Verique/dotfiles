@@ -1,9 +1,9 @@
 -- local pid = vim.fn.getpid()
 -- On linux/darwin if using a release build, otherwise under scripts/OmniSharp(.Core)(.cmd)
--- local omnisharp_bin = "../../../../../nvim-data/lsp_servers/omnisharp/omnisharp/OmniSharp.exe"
 -- on Windows
 -- local omnisharp_bin = "/path/to/omnisharp/OmniSharp.exe"
 --[[ local a = require("lspconfig").util ]]
+local root_pattern = require('lspconfig.util').root_pattern
 
 return {
 	handlers = {
@@ -22,7 +22,7 @@ return {
 	enable_ms_build_load_projects_on_demand = false,
 
 	-- Enables support for roslyn analyzers, code fixes and rulesets.1
-	enable_roslyn_analyzers = false,
+	enable_roslyn_analyzers = true,
     filetypes = { "cs", "vb", "cshtml" },
 
 	-- Specifies whether 'using' directives should be grouped and sorted during
@@ -39,13 +39,15 @@ return {
 
 	-- Specifies whether to include preview versions of the .NET SDK when
 	-- determining which version to use for project loading.
-	--[[ sdk_include_prereleases = false, ]]
+	sdk_include_prereleases = true,
 
 	-- Only run analyzers against open files when 'enableRoslynAnalyzers' is
 	-- true
 	-- analyze_open_documents_only = true,
-	--[[ root_dir = function(path) ]]
-	--[[ 	-- Make sure an sln doesn't already exist before trying to use the nearest csproj file ]]
-	--[[ 	return a.root_pattern("*.sln")(path) or a.root_pattern("*.csproj")(path) or a.root_pattern(:) ]]
-	--[[ end, ]]
+	root_dir = function(path)
+		-- Make sure an sln doesn't already exist before trying to use the nearest csproj file
+		return root_pattern("*.sln")(path) or root_pattern("*.csproj")(path)
+	end,
 }
+
+

@@ -25,10 +25,17 @@ M.setupKeys = function()
 	keymap("v", "p", '"_dP', opts)
 
 	-- Better window navigation
-	keymap("n", "<C-h>", "<C-w>h", opts)
-	keymap("n", "<C-j>", "<C-w>j", opts)
-	keymap("n", "<C-k>", "<C-w>k", opts)
-	keymap("n", "<C-l>", "<C-w>l", opts)
+	--[[ keymap("n", "<C-h>", "<C-w>h", opts) ]]
+	--[[ keymap("n", "<C-j>", "<C-w>j", opts) ]]
+	--[[ keymap("n", "<C-k>", "<C-w>k", opts) ]]
+	--[[ keymap("n", "<C-l>", "<C-w>l", opts) ]]
+
+    -- Kitty navigation
+ --[[    vim.g.kitty_navigator_no_mappings = 1 ]]
+	--[[ keymap("n", "<C-h>", "<cmd>KittyNavigateLeft<CR>", opts) ]]
+	--[[ keymap("n", "<C-l>", "<cmd>KittyNavigateRight<CR>", opts) ]]
+	--[[ keymap("n", "<C-j>", "<cmd>KittyNavigateDown<CR>", opts) ]]
+	--[[ keymap("n", "<C-k>", "<cmd>KittyNavigateUp<CR>", opts) ]]
 
 	local wk = require("user.keymaps.helpers")
     wk.addGroup("<Leader>", "command", {"n", "v"})

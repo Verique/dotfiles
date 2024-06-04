@@ -14,7 +14,7 @@ local settings = {
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
 	automatic_installation = true,
-    ensure_installed = {"lua_ls", "jsonls", "omnisharp_mono"}
+    ensure_installed = {"lua_ls", "jsonls", "omnisharp"}
 })
 
 require("mason-lspconfig").setup_handlers({

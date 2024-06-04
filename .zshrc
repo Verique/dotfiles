@@ -1,30 +1,17 @@
+setopt histignorealldups sharehistory
+export MY_CONFIG=~/.config/zsh
+source $MY_CONFIG/env.zsh
+source $MY_CONFIG/aliases.zsh
 
-path+=("$HOME/bin")
-path+=("$HOME/.local/bin")
-path+=("/snap/bin")
-export PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
-
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;47"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git vi-mode)
+plugins=(git vi-mode zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
-export LANG=en_US.UTF-8
-
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias jobDir='cd /mnt/d/_PIK_Projects/'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -32,11 +19,7 @@ prompt_context() {
   fi
 }
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+() {
+    SEGMENT_SEPARATOR=$'\ue0bc'
+}
+source $MY_CONFIG/completion.zsh

@@ -74,5 +74,6 @@ return {
 	-- Autopairs
 	{ "windwp/nvim-autopairs", config = require("user.autopairs").setup },
 	"windwp/nvim-ts-autotag",
-	{ "folke/which-key.nvim", config = require("user.keymaps").setup, init = require("user.keymaps").init },
+	{ "folke/which-key.nvim", init = require("user.keymaps").init, config = require("user.keymaps").setup },
+    "knubie/vim-kitty-navigator"
 }
