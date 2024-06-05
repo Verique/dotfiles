@@ -76,7 +76,7 @@ return {
 	{ "nvim-telescope/telescope.nvim", config = require("user.telescope").setup },
 
 	-- Bufferline
-	{ "romgrk/barbar.nvim", config = require("user.buffer-bar").setup },
+    require("user.bar-bar"),
 
 	-- StatusLine
 	{

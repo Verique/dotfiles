@@ -40,8 +40,8 @@ local options = {
 	sidescrolloff = 8,
 	confirm = true, -- confirmation for closing buffers
 --	keymap = "russian-jcukenwin", -- russian input
-	fixendofline = true,
-	fixeol = true,
+	fixendofline = false,
+	fixeol = false,
 }
 
 vim.opt.shortmess:append("c")
@@ -66,8 +66,8 @@ vim.g.clipboard = {
 		["*"] = "clip.exe",
 	},
 	paste = {
-		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("\r", ""))',
+		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("\r", ""))',
 	},
 	cache_enabled = 0,
 }

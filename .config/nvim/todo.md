@@ -11,3 +11,4 @@
 -[ ] neovim-lsp-tools
 -[ ] noice??
 -[ ] nvim diff hotkeys
+-[x] bar bar name for tree
