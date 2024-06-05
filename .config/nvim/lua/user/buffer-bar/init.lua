@@ -16,8 +16,7 @@ M.setup = function()
     tabpages = true,
 
     -- Enable/disable close button
-    closable = true,
-
+    closable = false,
 
     --  - left-click: go to buffer
     --  - middle-click: delete buffer

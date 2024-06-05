@@ -1,0 +1,13 @@
+-[x] better LSP
+-[x] onAttach autocmd
+-[ ] refactoring
+-[ ] inlay hints 
+-[ ] https://github.com/pmizio/typescript-tools.nvim
+-[x] git cred
+-[ ] fix windows
+-[ ] clipboard
+-[ ] dressing
+-[ ] trouble
+-[ ] neovim-lsp-tools
+-[ ] noice??
+-[ ] nvim diff hotkeys
