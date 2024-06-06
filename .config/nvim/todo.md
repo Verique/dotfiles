@@ -3,14 +3,17 @@
 -[ ] refactoring
 -[ ] inlay hints 
 -[ ] https://github.com/pmizio/typescript-tools.nvim
--[x] git cred ?? maybe not done idk
+-[ ] git cred ?? maybe not done idk
 -[x] fix windows
 -[ ] clipboard
--[ ] dressing
+-[ ] dressing / lsp saga
 -[ ] trouble
--[ ] neovim-lsp-tools
 -[ ] noice??
 -[ ] nvim diff hotkeys
 -[x] bar bar name for tree
 -[ ] lazy git !!
 -[ ] zen mode + kitty layouts? + kitty splits hotkeys?
+-[ ] alpha nvim
+-[ ] copilot??
+-[ ] indent line
+-[ ] langmapper

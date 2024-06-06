@@ -1,14 +1,12 @@
 local rootDir = ... .. '.'
 
 return {
-	"romgrk/barbar.nvim",
-	init = function()
-		vim.g.barbar_auto_setup = false
-	end,
+	"lewis6991/gitsigns.nvim",
 	config = function()
 		require(rootDir .. "keymaps").setup()
-		require("barbar").setup(
+		require("gitsigns").setup(
 			vim.tbl_deep_extend("force", require(rootDir .. "settings"), require(rootDir .. "appearance"))
 		)
 	end,
+	dependencies = { "sindrets/diffview.nvim" },
 }

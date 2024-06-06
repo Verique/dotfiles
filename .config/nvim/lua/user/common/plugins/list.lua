@@ -1,6 +1,5 @@
 return {
 	-- Utilities
-	"nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
 	"nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
 	"kyazdani42/nvim-web-devicons",
 
@@ -56,14 +55,11 @@ return {
 	},
 
 	-- Git
-	{
-		"lewis6991/gitsigns.nvim",
-		config = require("user.gitsigns").setup,
-		dependencies = { "sindrets/diffview.nvim" },
-	},
-
+    require("user.git"),
 	-- Tree
-	{ "kyazdani42/nvim-tree.lua", config = require("user.nvimtree").setup },
+    require("user.filetree"),
+	-- Bufferline
+    require("user.bar-bar"),
 
 	-- Comment
 	{
@@ -74,9 +70,6 @@ return {
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", config = require("user.telescope").setup },
-
-	-- Bufferline
-    require("user.bar-bar"),
 
 	-- StatusLine
 	{

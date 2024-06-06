@@ -59,12 +59,6 @@ return {
 		{ name = "DiagnosticSignInfo", text = "" },
 		{ name = "DiagnosticSignHint", text = "" },
 	},
-	nvim_tree_diagnostics = {
-		hint = "",
-		info = "",
-		warning = "",
-		error = "",
-	},
 	lualine = {
 		diagnostics = {
 			warn = "",
@@ -80,37 +74,10 @@ return {
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},
-	nvim_tree = {
-		default = "",
-		symlink = "",
-		git = {
-			unstaged = "",
-			staged = "S",
-			unmerged = "",
-			renamed = "➜",
-			deleted = "",
-			untracked = "U",
-			ignored = "◌",
-		},
-		folder = {
-			default = "",
-			open = "",
-			empty = "",
-			empty_open = "",
-			symlink = "",
-		},
-	},
 	which_key = {
 		breadcrumb = "", -- symbol used in the command line area that shows your active key combo
 		separator = "  ", -- symbol used between a key and it's label
 		group = "󰉓 ", -- symbol prepended to a group
-	},
-	gitsigns = {
-		add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-		change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-		delete = { hl = "GitSignsDelete", text = "", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-		topdelete = { hl = "GitSignsDelete", text = "", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-		changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
 	},
     cmp_sources = {
         nvim_lsp = "",
