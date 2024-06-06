@@ -12,22 +12,13 @@
 [rebase]
 	autoStash = false
 [diff]
-	tool = vimdiff
-	guitool = vimdiff
+	tool = nvimdiff
+	guitool = nvimdiff
 [merge]
 	tool = nvimdiff
 	guitool = nvimdiff
-[difftool "vimdiff"]
-	path = nvim
 [mergetool "nvimdiff"]
     path = nvim
-[credential]
-	helper = /mnt/a/Programs/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
-	credentialStore = cache
-[credential "https://git.pik.ru"]
-	provider = generic
 [push]
 	autoSetupRemote = true
 	default = current
-[credential "https://dev.azure.com"]
-	useHttpPath = true
