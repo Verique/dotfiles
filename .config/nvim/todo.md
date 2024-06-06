@@ -3,7 +3,7 @@
 -[ ] refactoring
 -[ ] inlay hints 
 -[ ] https://github.com/pmizio/typescript-tools.nvim
--[ ] git cred ?? maybe not done idk
+-[x] git cred ?? maybe not done idk
 -[x] fix windows
 -[ ] clipboard
 -[ ] dressing / lsp saga
