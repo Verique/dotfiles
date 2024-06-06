@@ -9,7 +9,6 @@ export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd.mm.yyyy"
-
 plugins=(git vi-mode zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 

@@ -58,16 +58,3 @@ vim.cmd("language en_US.UTF-8")
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
-
-vim.g.clipboard = {
-	name = "WslClipboard",
-	copy = {
-		["+"] = "clip.exe",
-		["*"] = "clip.exe",
-	},
-	paste = {
-		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("\r", ""))',
-		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("\r", ""))',
-	},
-	cache_enabled = 0,
-}

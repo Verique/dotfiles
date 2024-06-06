@@ -1,8 +1,8 @@
 local setup = function()
-	local wk = require("user.keymaps.helpers")
-	wk.addGroup("<Leader>e", "File Explorer")
-	wk.addWkKey("n", "<Leader>ee", "Open File Explorer", "<cmd>NvimTreeToggle<cr>")
-	wk.addWkKey("n", "<Leader>es", "Show File in Explorer", "<cmd>NvimTreeFindFile<cr>")
+	local keys = require("common.keymap-helpers")
+	keys.addGroup("<Leader>e", "File Explorer")
+	keys.add("n", "<Leader>ee", "Open File Explorer", "<cmd>NvimTreeToggle<cr>")
+	keys.add("n", "<Leader>es", "Show File in Explorer", "<cmd>NvimTreeFindFile<cr>")
 end
 
 local api = require("nvim-tree.api")

@@ -6,16 +6,7 @@ local pluginKeymaps = {
 }
 
 local setup = function()
-	local wk = require("user.keymaps.helpers")
-	wk.addGroup("<Leader>c", "Comment", { "n", "v" })
-
-	wk.addWkKey("n", pluginKeymaps.extra.eol, "Comment at end")
-	wk.addWkKey("n", pluginKeymaps.extra.below, "Comment below")
-	wk.addWkKey("n", pluginKeymaps.extra.above, "Comment above")
-	wk.addWkKey("n", pluginKeymaps.toggler.line, "Comment line")
-	wk.addWkKey("n", pluginKeymaps.toggler.block, "Comment block")
-	wk.addWkKey({ "n", "v" }, pluginKeymaps.opleader.line, "Comment as individual lines")
-	wk.addWkKey({ "n", "v" }, pluginKeymaps.opleader.block, "Comment as block")
+	require("common.keymap-helpers").addGroup("<Leader>c", "Comment", { "n", "v" })
 end
 
 return { setup = setup, pluginKeymaps = pluginKeymaps }

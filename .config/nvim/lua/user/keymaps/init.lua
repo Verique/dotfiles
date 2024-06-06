@@ -1,21 +1,18 @@
 local M = {}
 
 M.setup = function()
-	require("user.keymaps.all-keymaps").setup()
 	require("which-key").setup({
 		plugins = {
-			marks = false, -- shows a list of your marks on ' and `
-			registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+			marks = false,
+			registers = true,
 			spelling = {
 				suggestions = 20,
                 enabled = false,
-			}, -- use which-key for spelling hints
-			-- the presets plugin, adds help for a bunch of default keybindings in Neovim
-			-- No actual key bindings are created
+			},
 			presets = {
-				operators = true, -- adds help for operators like d, y, ...
-				motions = true, -- adds help for motions
-				text_objects = false, -- help for text objects triggered after entering an operator
+				operators = true,
+				motions = true,
+				text_objects = true, -- help for text objects triggered after entering an operator
 				windows = true, -- default bindings on <c-w>
 				nav = true, -- misc bindings to work with windows
 				z = true, -- bindings for folds, spelling and others prefixed with z
@@ -38,7 +35,7 @@ M.setup = function()
 			-- ["<cr>"] = "RET",
 			-- ["<tab>"] = "TAB",
 		},
-		icons = require("user.common.icons").which_key,
+		icons = require("common.icons").which_key,
 		popup_mappings = {
 			scroll_down = "<c-d>", -- binding to scroll down inside the popup
 			scroll_up = "<c-u>", -- binding to scroll up inside the popup

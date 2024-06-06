@@ -1,5 +1,5 @@
 local setup = function()
-	local signs = require("user.common.icons").diagnostics
+	local signs = require("common.icons").diagnostics
 
 	for _, sign in ipairs(signs) do
 		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })

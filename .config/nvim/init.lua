@@ -1,1 +1,1 @@
-require("user.common")
+require("common")

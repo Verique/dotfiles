@@ -5,7 +5,7 @@
 -[ ] https://github.com/pmizio/typescript-tools.nvim
 -[x] git cred ?? maybe not done idk
 -[x] fix windows
--[ ] clipboard
+-[x] clipboard
 -[ ] dressing / lsp saga
 -[ ] trouble
 -[ ] noice??
@@ -17,3 +17,4 @@
 -[ ] copilot??
 -[ ] indent line
 -[ ] langmapper
+-[ ] fix wrap

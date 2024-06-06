@@ -1,4 +1,4 @@
-local icons = require("user.common.icons").lualine
+local icons = require("common.icons").lualine
 local M = {}
 
 M.setup = function()

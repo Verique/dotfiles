@@ -1,12 +1,18 @@
 local rootDir = ... .. "."
+local keymaps = require(rootDir .. "keymaps")
 
 return {
 	"numToStr/Comment.nvim",
-	config = function()
-		local keymaps = require(rootDir .. "keymaps")
+	config = function(_, opts)
+		require("ts_context_commentstring").setup(opts.commentstring)
+		require("Comment").setup(opts.comment)
 		keymaps.setup()
-		require("ts_context_commentstring").setup({ enable_autocmd = false })
-		require("Comment").setup(vim.tbl_deep_extend("force", require(rootDir .. "settings"), keymaps.pluginKeymaps))
+	end,
+	opts = function()
+		return {
+			comment = vim.tbl_deep_extend("force", require(rootDir .. "settings"), keymaps.pluginKeymaps),
+			commentstring = { enable_autocmd = false },
+		}
 	end,
 	dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
 }

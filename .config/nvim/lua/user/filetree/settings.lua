@@ -3,7 +3,7 @@ local function on_attach(bufnr)
 end
 
 return {
-	hijack_cursor = true,
+	hijack_cursor = false,
 	auto_reload_on_write = true,
 	disable_netrw = true,
 	hijack_netrw = true,
