@@ -20,7 +20,7 @@ return {
 	hide = {
 		alternate = false,
 		current = false,
-		extensions = true,
+		extensions = false,
 		inactive = false,
 		visible = false,
 	},

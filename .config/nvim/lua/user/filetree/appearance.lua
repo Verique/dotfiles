@@ -39,7 +39,7 @@ return {
 		group_empty = true,
 		full_name = false,
 		root_folder_label = false,
-		indent_width = 1,
+		indent_width = 2,
 		special_files = {},
 		symlink_destination = true,
 		highlight_git = "none",

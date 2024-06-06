@@ -1,7 +1,6 @@
 return {
 	-- Utilities
 	"nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
-	"kyazdani42/nvim-web-devicons",
 
 	-- Colorscheme
 	{ "sainnhe/everforest", config = require("user.colorscheme").setup },
@@ -60,13 +59,8 @@ return {
     require("user.filetree"),
 	-- Bufferline
     require("user.bar-bar"),
-
 	-- Comment
-	{
-		"numToStr/Comment.nvim",
-		config = require("user.commenting").setup,
-		dependencies = { "JoosepAlviste/nvim-ts-context-commentstring" },
-	},
+    require("user.comments"),
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", config = require("user.telescope").setup },

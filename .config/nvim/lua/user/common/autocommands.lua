@@ -24,10 +24,3 @@ vim.cmd([[
     autocmd VimResized * tabdo wincmd = 
   augroup end
 ]])
-
-vim.cmd([[
-  augroup fileChanged
-    autocmd!
-    autocmd CursorHold * checktime
-  augroup end
-]])
