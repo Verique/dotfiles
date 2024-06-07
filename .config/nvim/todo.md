@@ -4,14 +4,14 @@
 -[x] git cred ?? maybe not done idk
 -[x] fix windows
 -[x] clipboard
--[ ] dressing / lsp saga
+-[x] dressing
+-[ ] lsp saga
 -[ ] trouble
 -[ ] noice??
 -[ ] nvim diff hotkeys
 -[x] bar bar name for tree
 -[ ] lazy git !!
--[ ] zen mode + kitty layouts? + kitty splits hotkeys?
--[ ] alpha nvim
+-[x] zen mode + kitty layouts? + kitty splits hotkeys?
 -[ ] copilot??
 -[ ] indent line
 -[ ] langmapper

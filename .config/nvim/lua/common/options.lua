@@ -39,19 +39,16 @@ local options = {
 	scrolloff = 8, -- minimum space offset when scrolling
 	sidescrolloff = 8,
 	confirm = true, -- confirmation for closing buffers
---	keymap = "russian-jcukenwin", -- russian input
 	fixendofline = false,
 	fixeol = false,
 }
 
+-- TODO: shortmess???
 vim.opt.shortmess:append("c")
 
 for key, value in pairs(options) do
 	vim.opt[key] = value
 end
-
-vim.opt.imsearch = 0 -- sets default input method to english
-vim.opt.iminsert = 0
 
 vim.cmd("language en_US.UTF-8")
 
