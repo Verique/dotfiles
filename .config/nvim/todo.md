@@ -1,8 +1,6 @@
 -[x] better LSP
 -[x] onAttach autocmd
--[ ] refactoring
--[ ] inlay hints 
--[ ] https://github.com/pmizio/typescript-tools.nvim
+-[x] refactoring for lazy plugins
 -[x] git cred ?? maybe not done idk
 -[x] fix windows
 -[x] clipboard
@@ -17,4 +15,10 @@
 -[ ] copilot??
 -[ ] indent line
 -[ ] langmapper
--[ ] fix wrap
+-[ ] fix wrap when resizing
+-[ ] peek/md
+-[ ] fidget
+-[ ] grugfar/ other find replace plugin
+-[ ] cmp/lsp/autocmd/common rewrite 
+-[ ] https://github.com/pmizio/typescript-tools.nvim
+-[ ] inlay hints 

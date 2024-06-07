@@ -1,13 +1,11 @@
-local M = {}
-
-M.setup = function()
+local setup = function()
 	require("which-key").setup({
 		plugins = {
 			marks = false,
 			registers = true,
 			spelling = {
 				suggestions = 20,
-                enabled = false,
+				enabled = false,
 			},
 			presets = {
 				operators = true,
@@ -76,9 +74,9 @@ M.setup = function()
 	})
 end
 
-M.init = function()
+local init = function()
 	vim.o.timeout = true
 	vim.o.timeoutlen = 300
 end
 
-return M
+return { "folke/which-key.nvim", init = init, config = setup }

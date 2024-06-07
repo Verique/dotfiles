@@ -4,12 +4,13 @@ local duplicates = {
 	luasnip = 1,
 }
 local duplicates_default = 0
+
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
-local icons = require("common.icons")
+local icons = require("plugins.completion.appearance")
 local M = {}
 M.setup = function()
 	local luasnip = require("luasnip")
@@ -93,7 +94,7 @@ M.setup = function()
 					vim_item.abbr = string.sub(vim_item.abbr, 1, max_width - 1) .. icons.ui.Ellipsis
 				end
 				vim_item.kind = icons.kind[vim_item.kind]
-				vim_item.menu = require("common.icons").cmp_sources[entry.source.name]
+				vim_item.menu = icons.cmp_sources[entry.source.name]
 				vim_item.dup = duplicates[entry.source.name] or duplicates_default
 				return vim_item
 			end,

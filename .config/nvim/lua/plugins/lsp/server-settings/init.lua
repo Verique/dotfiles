@@ -15,7 +15,7 @@ local overriddenCapabilities = {
 }
 
 return function(server_name)
-	local require_ok, conf_opts = pcall(require, "user.lsp.server-settings." .. server_name)
+	local require_ok, conf_opts = pcall(require, "plugins.lsp.server-settings." .. server_name)
 
 	local opts = {
 		capabilities = overriddenCapabilities[server_name] or basicCapabilities

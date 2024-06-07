@@ -1,5 +1,5 @@
 local onAttach = function(client, bufnr)
-	require("user.keymaps.lsp-keymaps").on_attach_keymaps(client, bufnr)
+	require("plugins.keymaps.lsp-keymaps").on_attach_keymaps(client, bufnr)
 	require("illuminate").on_attach(client)
 end
 
