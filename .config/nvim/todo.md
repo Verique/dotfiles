@@ -5,20 +5,23 @@
 -[x] fix windows
 -[x] clipboard
 -[x] dressing
--[ ] lsp saga
--[ ] trouble
--[ ] noice??
--[ ] nvim diff hotkeys
--[x] bar bar name for tree
--[ ] lazy git !!
 -[x] zen mode + kitty layouts? + kitty splits hotkeys?
--[ ] copilot??
--[ ] indent line
--[ ] langmapper
+-[x] bar bar name for tree
+-[ ] nvim diff hotkeys // -[ ] lazy git !!
+-[ ] trouble
+
+# optional
 -[ ] fix wrap when resizing
 -[ ] peek/md
 -[ ] fidget
+-[ ] inlay hints 
 -[ ] grugfar/ other find replace plugin
 -[ ] cmp/lsp/autocmd/common rewrite 
 -[ ] https://github.com/pmizio/typescript-tools.nvim
--[ ] inlay hints 
+
+# not likely
+-[ ] copilot??
+-[ ] indent line
+-[ ] langmapper
+-[ ] noice??
+-[ ] lsp saga

@@ -22,3 +22,5 @@
 [push]
 	autoSetupRemote = true
 	default = current
+[credential "https://git.pik.ru"]
+	provider = generic
