@@ -6,8 +6,8 @@ vim.cmd([[
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Search', timeout = 200}) 
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
-    autocmd Filetype javascript,javascriptreact,javascript.jsx,typescript,typescriptreact,typescript.tsxsetlocal set tabstop=2
-    autocmd Filetype javascript,javascriptreact,javascript.jsx,typescript,typescriptreact,typescript.tsxsetlocal set shiftwidth=2
+    autocmd Filetype javascript,javascriptreact,javascript.jsx,typescript,typescriptreact,typescript.tsxsetlocal,xml set tabstop=2
+    autocmd Filetype javascript,javascriptreact,javascript.jsx,typescript,typescriptreact,typescript.tsxsetlocal,xml set shiftwidth=2
   augroup end
   augroup _git
     autocmd!
