@@ -1,0 +1,28 @@
+[user]
+	name = Verique
+	email = suolucitem@gmail.com
+[core]
+	longpaths = true
+	editor = nvim
+	autocrlf = false
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[diff]
+	tool = vimdiff
+	guitool = meld
+[merge]
+	tool = nvimdiff
+	guitool = meld
+[mergetool "nvimdiff"]
+	path = nvim
+[credential]
+	helper = manager-core
+[credential "https://git.pik.ru"]
+	provider = generic
+[push]
+	autoSetupRemote = true
+	default = current
