@@ -2,11 +2,16 @@ function Config-Edit {
     pushd $HOME/.config/
 }
 
-function nvr {
+function Godot-Nvr {
     if (-not (Test-Path "\\.\pipe\nvim-nvr")) 
-        { wezterm -e "nvim --listen "\\.\pipe\nvim-nvr" $args" } 
+        { wt -F --title Godot-Neovim -d $project -p PowerShell pwsh -c "nvim --listen "\\.\pipe\nvim-nvr" $args" } 
     else
 		{ if ($args) {nvim --server "\\.\pipe\nvim-nvr" --remote $args } } 
+}
+
+function Godot-Editor($project, $file) {
+    Godot-Nvr $file
+    (New-Object -ComObject WScript.Shell).AppActivate("Godot-Neovim")
 }
 
 function ChromeCORSless {

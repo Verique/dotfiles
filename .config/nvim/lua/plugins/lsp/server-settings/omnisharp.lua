@@ -1,4 +1,4 @@
-local root_pattern = require("lspconfig.util").root_pattern
+-- local root_pattern = require("lspconfig.util").root_pattern
 
 return {
 	handlers = {
@@ -13,8 +13,8 @@ return {
 	sdk_include_prereleases = true,
     analyze_open_documents_only = true,
 
-	root_dir = function(path)
-		-- Make sure an sln doesn't already exist before trying to use the nearest csproj file
-		return root_pattern("*.sln")(path) or root_pattern("*.csproj")(path)
-	end,
+	-- root_dir = function(path)
+	-- 	-- Make sure an sln doesn't already exist before trying to use the nearest csproj file
+	-- 	return root_pattern("*.sln")(path) or root_pattern("*.csproj")(path)
+	-- end,
 }

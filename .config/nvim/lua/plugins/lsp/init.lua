@@ -1,6 +1,6 @@
 local setup = function()
     require("mason").setup(require("plugins.lsp.settings"))
-	require("mason-lspconfig").setup({ ensure_installed = { "lua_ls", "jsonls", "omnisharp", "vtsls" } })
+	require("mason-lspconfig").setup({ ensure_installed = { "lua_ls", "jsonls", "omnisharp_mono", "vtsls" } })
 	require("mason-lspconfig").setup_handlers({ require("plugins.lsp.server-settings.init") })
 	require("plugins.lsp.vim-diagnostics").setup()
 	require("plugins.lsp.none-ls").setup()

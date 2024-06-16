@@ -8,12 +8,12 @@
 -[x] zen mode + kitty layouts? + kitty splits hotkeys?
 -[x] bar bar name for tree
 -[ ] nvim diff hotkeys // -[ ] lazy git !!
+-[ ] fidget
 -[ ] trouble
 
 # optional
 -[ ] fix wrap when resizing
 -[ ] peek/md
--[ ] fidget
 -[ ] inlay hints 
 -[ ] grugfar/ other find replace plugin
 -[ ] cmp/lsp/autocmd/common rewrite 
